@@ -1,0 +1,62 @@
+0, ,<,st_copy
+
+st_copy,0,<,st_copy
+st_copy,1,<,st_copy
+st_copy, ,>,copy
+
+copy,0, ,move_r0
+copy,1, ,move_r1
+
+move_r0, ,>,copy0
+move_r1, ,>,copy1
+
+copy1,1,>,copy1
+copy1,0,>,copy1
+copy1, ,>,first_copy1
+
+copy0,1,>,copy0
+copy0,0,>,copy0
+copy0, ,>,first_copy0
+
+first_copy0,0,>,without_space0
+first_copy0,1,>,without_space0
+first_copy0, ,1,move_left0
+
+without_space0,0,>,without_space0
+without_space0,1,>,without_space0
+without_space0, ,1,move_left0
+
+
+first_copy1,0,>,without_space1
+first_copy1,1,>,without_space1
+first_copy1, ,0,move_left1
+
+without_space1,0,>,without_space1
+without_space1,1,>,without_space1
+without_space1, ,0,move_left1
+
+move_left0,0,<,move_left0
+move_left0,1,<,move_left0
+move_left0, ,<,fr_space0
+
+move_left1,1,<,move_left1
+move_left1,0,<,move_left1
+move_left1, ,<,fr_space1
+
+fr_space0,0,<,fr_space0
+fr_space0,1,<,fr_space0
+fr_space0, ,0,end_copy
+
+fr_space1,0,<,fr_space1
+fr_space1,1,<,fr_space1
+fr_space1, ,1,end_copy
+
+end_copy,0,>,copy
+end_copy,1,>,copy
+
+
+copy, ,>,end
+
+end,0,>,end
+end,1,>,end
+end, ,#,end
