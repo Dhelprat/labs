@@ -16,7 +16,7 @@
 
 ## 3. Задание
 Вариант 17
-![Вариант 17](https://github.com/dhelprat/labs/5/var.png)
+![Вариант 17](https://github.com/Dhelprat/labs/blob/master/5/task.jpg)
 
 ## 4. Оборудование
 
