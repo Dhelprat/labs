@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <math.h>
 
 const int I_0 = 13;
 const int J_0 = 19;
@@ -25,6 +24,11 @@ int sign (int a) {
     else { return -1; }
 }
 
+int abs (int a) {
+    if (a > 0) { return a; }
+    else {return -a; }
+}
+
 int main() {
     struct step last = {I_0, J_0, L_0, 0};
 
@@ -41,6 +45,8 @@ int main() {
             printf("Stopped on: %d", current.k);
             return 0;
         }
+
+        last = current;
     }
     printf("No point fell within the specified area :(");
     return 0;
