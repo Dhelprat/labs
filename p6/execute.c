@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
     int pc_count = 0;
 
     while (pc_read_bin(pc, input_file)) {
-        if (pc->processor_count == 2 && pc->external_device_count <= p) {
+        if (pc->processor_count == 2 && pc->external_device_count > p) {
 
             printf("Student \"%s\" have 2 processors and %d external devices\n", pc->owner_surname,
                    pc->external_device_count);
